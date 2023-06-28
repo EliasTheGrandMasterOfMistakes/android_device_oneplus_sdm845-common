@@ -96,7 +96,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.hardware.egl = angle \
-	ro.hardware.egl_legacy = adreno
+	ro.hardware.egl_legacy = adreno \
+        debug.renderengine.backend=skiavkthreaded
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

@@ -425,8 +425,8 @@ vendor/firmware/a630_zap.elf
 vendor/firmware/a630_zap.mdt
 
 # Graphics (Vulkan)
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.adreno.so
+#vendor/lib/hw/vulkan.adreno.so
+#vendor/lib64/hw/vulkan.adreno.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti

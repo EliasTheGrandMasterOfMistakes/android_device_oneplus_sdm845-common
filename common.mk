@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.hardware.vulkan=freedreno \
 
+#HWUI
+TARGET_USES_VULKAN := true
+HWUI_COMPILE_FOR_PERF := true
+
 # We will use Angle Driver.
 USE_ANGLE ?= true
 

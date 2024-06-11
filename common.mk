@@ -82,6 +82,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.hardware.vulkan=freedreno \
 
+# We will use Angle Driver.
+USE_ANGLE ?= true
+
+PRODUCT_PACKAGES += \
+	libEGL_angle \
+	libGLESv1_CM_angle \
+	libGLESv2_angle
+
+PRODUCT_VENDOR_PROPERTIES += \
+	ro.hardware.egl = angle \
+	ro.hardware.egl_legacy = adreno
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \

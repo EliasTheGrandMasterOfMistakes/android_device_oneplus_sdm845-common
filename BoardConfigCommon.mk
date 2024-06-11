@@ -106,6 +106,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
+# Mesa3D
+BOARD_MESA3D_USES_MESON_BUILD := true
+BOARD_MESA3D_VULKAN_DRIVERS := freedreno
+
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/op_disable_charge
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0

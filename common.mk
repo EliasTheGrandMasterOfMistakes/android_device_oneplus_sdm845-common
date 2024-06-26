@@ -83,32 +83,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    vulkan.freedreno
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.hardware.vulkan=freedreno
+   ro.hardware.vulkan=freedreno \
 
 #HWUI
 TARGET_USES_VULKAN := true
 HWUI_COMPILE_FOR_PERF := true
 
 # We will use Angle Driver.
-#USE_ANGLE ?= true
-
-#PRODUCT_PACKAGES += \
-#	libEGL_angle \
-#	libGLESv1_CM_angle \
-#	libGLESv2_angle
+USE_ANGLE ?= true
 
 PRODUCT_PACKAGES += \
-      libEGL_mesa \
-      libGLESv1_CM_mesa \
-      libGLESv2_mesa \
-      libgallium_dri \
-      libglapi
+	libEGL_angle \
+	libGLESv1_CM_angle \
+	libGLESv2_angle
 
 PRODUCT_VENDOR_PROPERTIES += \
-	ro.hardware.egl = mesa \
-        mesa.loader.driver.override = zink
-
-#ro.hardware.egl_legacy = adreno \
+	ro.hardware.egl = angle \
+	ro.hardware.egl_legacy = adreno \
         debug.renderengine.backend=skiavkthreaded
 
 AB_OTA_POSTINSTALL_CONFIG += \

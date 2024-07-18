@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    vulkan.freedreno
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.hardware.vulkan=freedreno
+   ro.hardware.vulkan=freedreno \
 
 #HWUI
 TARGET_USES_VULKAN := true
@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 	libGLESv2_angle
 
 PRODUCT_VENDOR_PROPERTIES += \
-	persist.graphics.egl=angle \
+	ro.hardware.egl = angle \
+	ro.hardware.egl_legacy = adreno \
         debug.renderengine.backend=skiavkthreaded
 
 AB_OTA_POSTINSTALL_CONFIG += \

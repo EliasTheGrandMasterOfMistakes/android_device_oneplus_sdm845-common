@@ -83,7 +83,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    vulkan.freedreno
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.hardware.vulkan=freedreno \
+   ro.hardware.vulkan=freedreno
+
+PRODUCT_PACKAGES += \
+      libEGL_mesa \
+      libGLESv1_CM_mesa \
+      libGLESv2_mesa \
+      libgallium_dri \
+      libglapi
+
+PRODUCT_VENDOR_PROPERTIES += \
+        ro.hardware.egl = mesa \
+        mesa.loader.driver.override = zink
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

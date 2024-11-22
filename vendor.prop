@@ -108,6 +108,7 @@ ro.bluetooth.a2dp_offload.supported=true
 # HWUI
 debug.hwui.renderer=skiagl
 debug.hwui.skia_atrace_enabled=false
+debug.renderengine.backend=skiaglthreaded
 
 # Camera
 persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
